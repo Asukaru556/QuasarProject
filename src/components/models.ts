@@ -6,3 +6,14 @@ export interface Todo {
 export interface Meta {
   totalCount: number;
 }
+
+export interface ILoginForm {
+  email: string;
+  password: string;
+}
+
+export interface IRegisterForm {
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
