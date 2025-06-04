@@ -1,5 +1,5 @@
 <template>
-  <q-card class="register-card q-pa-md qcard">
+  <q-card class="register-card q-pa-md qcard formBack">
     <q-card-section>
       <div class="text-h6">Register</div>
     </q-card-section>
@@ -38,7 +38,10 @@
         label="Password"
         hint="Repeat password"
         color="brown-5"
-        :rules="[(val) => val === form.password || 'Пароли не совпадают!']"
+        :rules="[
+          (val) => (val && val.length > 0) || 'Поле является обязательным!',
+          (val) => val === form.password || 'Пароли не совпадают!',
+        ]"
       />
 
       <div>
@@ -76,5 +79,9 @@ function onReset() {
 <style scoped>
 .register-card {
   width: 360px;
+}
+
+.formBack {
+  background: #c0bbc48a;
 }
 </style>
