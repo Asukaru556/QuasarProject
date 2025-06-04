@@ -8,6 +8,28 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
+    path: '/categories',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/CategoriesPage.vue') }],
+  },
+
+  {
+    path: '/categories',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/CategoriesPage.vue') },
+      { path: 'add', component: () => import('pages/NewCategoryPage.vue') },
+      { path: ':id', component: () => import('pages/CategoryPage.vue') },
+    ],
+  },
+
+  {
+    path: '/models',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/ModelsPage.vue') }],
+  },
+
+  {
     path: '/login',
     component: () => import('layouts/AuthLayout.vue'),
     children: [{ path: '', component: () => import('pages/LoginPage.vue') }],

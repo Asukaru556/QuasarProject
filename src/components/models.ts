@@ -17,3 +17,9 @@ export interface IRegisterForm {
   password: string;
   confirmPassword: string;
 }
+
+export interface ICategory {
+  id: number;
+  title: string;
+  description: string;
+}
