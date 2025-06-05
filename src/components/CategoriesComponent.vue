@@ -1,6 +1,6 @@
 <template>
   <div class="row justify-between">
-    <div class="text-h6">Categories</div>
+    <div class="text-h6">Категории</div>
     <q-btn color="primary">
       <q-icon @click="$router.push(`categories/add`)" left size="3em" name="add_circle_outline" />
       <div>Создать новую категорию</div>

@@ -4,20 +4,21 @@
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title> Библиотека моделей </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>
+          <q-btn to="/login" color="primary" icon="login" label="Войти"> </q-btn>
+          <q-btn to="/register" color="primary" icon="perm_identity" label="Регистрация"> </q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header> Меню </q-item-label>
 
         <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
       </q-list>
-      <router-link to="/login" class="black q-px-sm text-white">Login</router-link>
-      <router-link to="/register" class="black q-px-sm text-white">Register</router-link>
     </q-drawer>
 
     <q-page-container>
@@ -40,14 +41,14 @@ import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink
 
 const linksList: EssentialLinkProps[] = [
   {
-    title: 'Categoties',
-    caption: 'categories models',
+    title: 'Категории',
+    caption: 'Категории моделей',
     icon: 'topic',
     link: '/categories',
   },
   {
-    title: 'Models',
-    caption: 'our models',
+    title: 'Модели',
+    caption: 'Наши модели',
     icon: 'view_in_ar',
     link: '/models',
   },

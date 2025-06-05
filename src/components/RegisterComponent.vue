@@ -1,5 +1,5 @@
 <template>
-  <q-card class="register-card q-pa-md qcard formBack">
+  <q-card class="register-card q-pa-md qcard">
     <q-card-section>
       <div class="text-h6">Register</div>
     </q-card-section>
@@ -79,9 +79,5 @@ function onReset() {
 <style scoped>
 .register-card {
   width: 360px;
-}
-
-.formBack {
-  background: #c0bbc48a;
 }
 </style>

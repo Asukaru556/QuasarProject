@@ -1,6 +1,6 @@
 <template>
   <div class="row justify-between">
-    <div class="text-h6">Добавление категории</div>
+    <div class="text-h6">Добавление модели</div>
     <q-btn icon="arrow_back" label="Назад" type="submit" color="primary" @click="$router.back()" />
   </div>
 
@@ -9,7 +9,7 @@
       filled
       v-model="form.title"
       label="Название"
-      hint="Название категории"
+      hint="Название модели"
       :rules="[
         (val) => (val && val.length > 0) || 'Поле является обязательным!',
         (val) => (val && val.length < 256) || 'Должно быть не больше 256 символов!',
@@ -19,7 +19,7 @@
       filled
       v-model="form.description"
       label="Описание"
-      hint="Описание категории"
+      hint="Описание модели"
       type="textarea"
     />
 
@@ -32,9 +32,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import type { ICategory } from 'components/models';
+import type { IModel } from 'components/models';
 
-const form = ref<Omit<ICategory, 'id'>>({
+const form = ref<Omit<IModel, 'id'>>({
   title: '',
   description: '',
 });

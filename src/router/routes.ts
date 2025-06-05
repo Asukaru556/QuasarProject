@@ -26,7 +26,11 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/models',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/ModelsPage.vue') }],
+    children: [
+      { path: '', component: () => import('pages/ModelsPage.vue') },
+      { path: 'add', component: () => import('pages/NewModelPage.vue') },
+      { path: ':id', component: () => import('pages/ModelPage.vue') },
+    ],
   },
 
   {

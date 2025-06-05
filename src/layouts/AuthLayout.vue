@@ -4,14 +4,19 @@
       <div>
         <q-toolbar>
           <q-toolbar-title>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-            </q-avatar>
-            Title
+            <q-btn to="/" color="primary" label="">
+              <q-avatar>
+                <img :src="logo" />
+              </q-avatar>
+            </q-btn>
+            Авторизация
           </q-toolbar-title>
         </q-toolbar>
       </div>
-      <div class="q-px-sm"><AuthLinks></AuthLinks></div>
+      <div>
+        <q-btn to="/login" color="primary" icon="login" label="Войти"> </q-btn>
+        <q-btn to="/register" color="primary" icon="perm_identity" label="Регистрация"> </q-btn>
+      </div>
     </q-header>
 
     <q-page-container>
@@ -21,5 +26,5 @@
 </template>
 
 <script setup lang="ts">
-import AuthLinks from 'components/AuthLinks.vue';
+import logo from '../../public/icons/logo.png';
 </script>
